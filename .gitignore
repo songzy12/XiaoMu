@@ -2,5 +2,6 @@ references
 data
 output
 api
+MatchZoo
 *.swp
 *.pyc
