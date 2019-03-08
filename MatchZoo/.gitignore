@@ -2,7 +2,7 @@
 *.log
 *.swp
 *.bak
-*.weights
+*.weights*
 *.trec
 *.ranklist
 *.DS_Store

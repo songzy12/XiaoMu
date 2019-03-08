@@ -70,6 +70,23 @@ def train(config):
         share_input_conf['embed'] = embed
     print('[Embedding] Embedding Load Done.', end='\n')
 
+    # collect tfidf 
+    if 'tfidf_path' in share_input_conf:
+        tfidf_dict = {}
+        with open(share_input_conf['tfidf_path']) as f:
+            for line in f.readlines():
+                k, v = line.strip().split()
+                tfidf_dict[int(k)] = np.full((share_input_conf['embed_size'],), float(v), dtype=np.float32)
+        _PAD_ = share_input_conf['vocab_size'] - 1
+        tfidf_dict[_PAD_] = np.ones((share_input_conf['embed_size'], ), dtype=np.float32)
+        embed = np.float32(np.ones((share_input_conf['vocab_size'], share_input_conf['embed_size']), dtype=np.float32))
+        share_input_conf['tfidf'] = convert_embed_2_numpy(tfidf_dict, embed = embed)
+    else:
+        embed = np.float32(np.ones((share_input_conf['vocab_size'], share_input_conf['embed_size']), dtype=np.float32))
+        share_input_conf['tfidf'] = embed
+
+    print('[TFIDF] TFIDF Load Done.', end='\n')
+
     # list all input tags and construct tags config
     input_train_conf = OrderedDict()
     input_eval_conf = OrderedDict()
@@ -139,6 +156,9 @@ def train(config):
     model.compile(optimizer=optimizer, loss=loss)
     print('[Model] Model Compile Done.', end='\n')
 
+    loss_ = []
+    metric_ = []
+
     for i_e in range(num_iters):
         for tag, generator in train_gen.items():
             genfun = generator.get_batch_generator()
@@ -151,6 +171,7 @@ def train(config):
                     verbose = 0
                 ) #callbacks=[eval_map])
             print('Iter:%d\tloss=%.6f' % (i_e, history.history['loss'][0]), end='\n')
+            loss_.append(history.history['loss'][0])
 
         for tag, generator in eval_gen.items():
             genfun = generator.get_batch_generator()
@@ -174,8 +195,11 @@ def train(config):
             generator.reset()
             print('Iter:%d\t%s' % (i_e, '\t'.join(['%s=%f'%(k,v/num_valid) for k, v in res.items()])), end='\n')
             sys.stdout.flush()
+            metric_.append(res.values()[0] / num_valid)
         if (i_e+1) % save_weights_iters == 0:
             model.save_weights(weights_file % (i_e+1))
+    with open(weights_file[:-2] + 'loss_metric', 'w') as f:
+        f.write(json.dumps({'loss': loss_, 'metric': metric_}))
 
 def predict(config):
     ######## Read input config ########
@@ -195,6 +219,24 @@ def predict(config):
         embed = np.float32(np.random.uniform(-0.2, 0.2, [share_input_conf['vocab_size'], share_input_conf['embed_size']]))
         share_input_conf['embed'] = embed
     print('[Embedding] Embedding Load Done.', end='\n')
+
+    # collect tfidf 
+    if 'tfidf_path' in share_input_conf:
+        tfidf_dict = {}
+        with open(share_input_conf['tfidf_path']) as f:
+            for line in f.readlines():
+                k, v = line.strip().split()
+                tfidf_dict[int(k)] = np.full((share_input_conf['embed_size'],), float(v), dtype=np.float32) 
+        _PAD_ = share_input_conf['vocab_size'] - 1
+        tfidf_dict[_PAD_] = np.ones((share_input_conf['embed_size'], ), dtype=np.float32)
+        embed = np.float32(np.ones((share_input_conf['vocab_size'], share_input_conf['embed_size']), dtype=np.float32))
+        share_input_conf['tfidf'] = convert_embed_2_numpy(tfidf_dict, embed = embed)
+    else:
+        embed = np.float32(np.ones((share_input_conf['vocab_size'], share_input_conf['embed_size']), dtype=np.float32))
+        share_input_conf['tfidf'] = embed
+
+    print('[TFIDF] TFIDF Load Done.', end='\n')
+
 
     # list all input tags and construct tags config
     input_predict_conf = OrderedDict()
