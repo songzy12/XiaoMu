@@ -116,7 +116,7 @@ if __name__ == '__main__':
     with io.open(data_dir, encoding='utf8') as f:
         items = json.loads(f.read())
     print(len(items))
-    for dist_func in [get_dot, get_edit_distance, get_lcs, get_wmd]:
+    for dist_func in [get_lcs, get_edit_distance, get_dot, get_wmd]:
         cnt = 0
         for item in items:
             question = item[0]['question']
