@@ -1,0 +1,16 @@
+*.pyc
+*.log
+*.swp
+*.bak
+*.weights
+*.trec
+*.ranklist
+*.DS_Store
+predict.*
+build/
+dist/
+log/*
+matchzoo/log/*
+matchzoo/querydecision/
+log/*
+.idea/
