@@ -9,24 +9,6 @@ model = gensim.models.Word2Vec.load(
     '../../data/wiki.zh.text.list.128.model')
 
 
-def compute_mrr(scores, match):
-    mrr = 0
-    for k, v in match.items():
-        rank_list = scores[k]
-        rank = min([rank_list.index(x) if x in rank_list else -1 for x in v])
-        mrr += 1. / (rank+1) if rank != -1 else 0
-    return mrr * 1. / len(match)
-
-
-def compute_hit_at_n(scores, match, n):
-    cnt = 0
-    for k, v in match.items():
-        rank_list = scores[k][:n]
-        if set(rank_list) & set(v):
-            cnt += 1
-    return cnt * 1. / len(match)
-
-
 def get_wmd(doc1, doc2):
     distance = model.wmdistance(doc1, doc2)
     return -distance
@@ -112,7 +94,7 @@ def get_edit_distance(doc1, doc2):
 
 
 if __name__ == '__main__':
-    data_dir = '../../data/switch_processed.json'
+    data_dir = '../data/switch_processed.json'
     with io.open(data_dir, encoding='utf8') as f:
         items = json.loads(f.read())
     print(len(items))
