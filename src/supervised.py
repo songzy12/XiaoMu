@@ -11,6 +11,13 @@ model_classes = [
     mz.models.CDSSM,
     mz.models.DSSM,
     mz.models.DUET,
+    mz.models.DenseBaseline,
+    mz.models.ArcI,
+    mz.models.ArcII,
+    mz.models.MatchPyramid,
+    mz.models.DRMM,
+    mz.models.ANMM,
+    mz.models.MVLSTM
 ]
 
 
@@ -36,7 +43,7 @@ for model_class in model_classes:
         verbose=0
     )
     history = model_ok.fit(*train_ok.unpack(), batch_size=32,
-                           epochs=3, callbacks=[callback])
+                           epochs=32, callbacks=[callback])
     results.append({'name': model_ok.params['name'], 'history': history})
 
 charts = {
