@@ -21,6 +21,9 @@ data_pack.shuffle(inplace=True)
 train_slice = data_pack[:num_train]
 test_slice = data_pack[num_train:]
 
+train_slice.save(dirpath+'/train')
+test_slice.save(dirpath+'/test')
+
 task = mz.tasks.Ranking(metrics=['map', 'mrr','ndcg'])
 results = []
 for model_class in model_classes:

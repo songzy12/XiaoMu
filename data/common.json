@@ -1,0 +1,142 @@
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"自主模式证书和随堂模式证书的区别。","answer":"自主模式和随堂模式在证书上的区别就是除了课程名不一样（多了自主模式几个字），其他都是一样的。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"如何在讨论区和Wiki插入图片","answer":"（1）生成图片（任何方法）。比如用hypersnap截图。<br>（2）上载到网盘（任何网盘）。<br>（3）设置共享，得到访问链接。<br>（4）讨论区恰当的地方插入图片，语法是：“![Title](put ur url here)”（去掉双引号）。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"如何在讨论区和Wiki插入公式","answer":"讨论区完全支持LaTeX的公式。<br>如果你对LaTeX不熟悉。我来教你。<br>（1）安装并打开mathtype或使用<a href='http://zh.numberempire.com/texequationeditor/equationeditor.php'>http://zh.numberempire.com/texequationeditor/equationeditor.php</a>。功能类似）<br>（2）在偏好preference里设置复制选项为MathML或Tex<br>（3）在mathtype下编辑公式。全选－复制。<br>（4）在讨论区相应位置粘贴。你将得到类似下面的文字。不要被唬住<br>（5）注：所有前面有%的行都是注释，可删除（也就是说，只有最后一行有用）。另外，如果是以∖[打头和∖]收尾的公式（单行公式），要替换为$打头和$收尾（行间公式）。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"如何玩转使用Wiki","answer":"玩Wiki的有趣之处就是，老生、新生一起，构建电路原理课程的百科全书。<br>单击Wiki进入，右键单击某个词条，选择用新标签打开（这个很重要，因为这些词条都还在老课程中保存。如果你左键单击，就进入老课，回不来了。^_^）<br>单击“编辑”进入一个标准的与讨论区相同的编辑界面，如何插入图、公式的技巧在这里都可以用。<br>单击“改变”即可保存，注意：不要在“设置”选项里面改参数,不要在Wiki主界面“编辑”，只需要编辑某个词条即可。<br>开始感受Wiki的乐趣吧！"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"课件无法播放","answer":"请尝试刷新或者更换Chrome或Firefox浏览器"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"练习题答案不能输入圆周率pi","answer":"输入近似数3.14即可"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"课程视频和flash能否下载","answer":"可以的。在视频下方，点击下载视频和字幕；在课程信息页面右侧，点击下载flash"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"如何查询成绩","answer":"点击“课程进度”可查询个人成绩"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"看课件的时候视频卡顿，每隔两三秒就要停一下","answer":"可以切换成“标清”试试？"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"本章检测后面的闹钟代表什么意思","answer":"是截止日期的意思，但是自主模式没有截止日期所以为空白，不用担心"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"申请证书认证后须在多长时间内完成全部课程才能得到证书？","answer":"自主模式课程的证书申请无时间限制，任何时候只要成绩达标了就可以。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"为何答错quiz要过8个小时才能重新回答","answer":"自主模式里，没有次数限制，只有时间间隔限制。学生可能一次没有通过课程，今后重新学习这门课的时候，应该允许重新做题。很好理解：如果两个都不限制，岂不是不用做题了，ABCD排着试就好了？"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"课件视频没有声音","answer":"请尝试刷新或者更换成Google Chrome浏览器"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"单选与多选的区别区分","answer":"通过正方形与圆形来区分，圆圈指代的是单选项，方框指代的是多选。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"课程证书有什么用处","answer":"1) 有些大学，如北京联合大学是可以取代上课，拿本校的学分的。<br>2）有些学校是可以算平时成绩的。<br>3）如果社会上认可度高了，放在自己的简历里也不错。<br>不要证书也没有关系。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"遇到小木无法解决的问题怎么办?","answer":"1、如果你有任何学习上的问题，请通过讨论区发帖的方式联系助教，助教会及时进行反馈。<br>2、如果你遇到的是学堂在线平台的问题，比如账户和邮箱激活等，请选择以下任一种方式联系学堂在线客服：<br>1）登录学堂在线客服官网： <a href='http://www.xuetangx.com/repair/'>http://www.xuetangx.com/repair/</a><br>（客服会保证在一个工作日内给回复，不能当场解决的问题，会随后给出回复）<br>2）联系电话：010-82152567<br>工作时间：工作日 10:00-18:00"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"如何注册学堂在线？","answer":" 1、pc端打开<a href='http://www.xuetangx.com'>http://www.xuetangx.com</a>，右上角点击注册，您可以使用邮箱或手机号进行注册。或者使用第三方账户，比如新浪微博，腾讯QQ，微信进行登录，通过此方式登录建议您及时绑定邮箱，手机号，以方便后续使用。<br>2、App端：打开学堂在线手机客户端点击注册，可以使用邮箱或手机号进行注册。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"我的登录密码忘了怎么办？","answer":"pc端打开<a href='http://www.xuetangx.com'>http://www.xuetangx.com</a>，点击右上角登录，点击下方忘记密码，通过邮箱或手机号找回。如未绑定手机号只能通过邮箱找回。<br>App端：打开学堂在线手机客户端点击登录左下角的忘记密码通过邮箱或手机号找回。如未绑定手机号只能通过邮箱找回。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"如何修改密码？","answer":"pc端登录学堂在线，点击“我的课程”左下角处点击重设密码，输入您的旧密码和新密码即可。<br>App端登录学堂在线，点击“账户”重设密码，输入旧密码验证通过后输入新密码修改即可。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"请问如何修改用户名？","answer":"目前不支持修改用户名。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"请问如何修改邮箱？","answer":"目前用户端不支持修改。如需修改请向人工客服提供错误邮箱、正确邮箱、用户名信息。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"账户可以注销吗？","answer":"目前不支持，建议放弃使用。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"为什么我收不到账号激活邮件？","answer":"1、查询激活邮件是否被误加入垃圾邮件，并恢复至收件箱。<br>2) Gmail, Outlook等邮箱服务器在国外，邮件可能被拦截或有延迟，建议您更换国内邮箱注册。<br>3) 请检查您注册的邮箱是否正确，如果正确，请发邮件到support@xuetangx.com。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"如何解绑账户绑定的第三方账户？","answer":"在登录的时候选择第三方登录，进入“我的主页”---右下方第三方账户--解除绑定。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"我学堂在线的某门课程无法正常播放。","answer":"请尝试刷新页面或更换其他浏览器。<br> 如仍然无法正常播放您可以登录<a href='http://ip138.com/'>http://ip138.com/</a>或<a href='http://ip.cn/'>http://ip.cn/</a>查询到IP地址信息。请将您所在的区域、网络类型（例如北京联通10M宽带）、IP地址、联系方式（QQ或手机）发给人工客服处理。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"如何下载英文字幕？","answer":"中文课程：暂不支持下载英文字幕。<br>英文课程：把字幕切换成英文，点击下载字幕就是英文版。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"如何下载视频？","answer":"pc端暂时不支持下载视频。可以通过学堂在线手机App下载。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"如何申请电子版证书 ？","answer":"自主课程成绩合格后会收到申请证书站内信，按照提示进行申请。<br>随堂课程证书申请方法：<br>1）进入“我的主页” ；<br>2）选择已结课，点击课程标题下的申请/领取证书入口；<br>3）完善个人信息，选择需要的证书类型，提交订单；<br>4）电子证书可立即生成，纸质证书需完善物流信息，支付制作费用（认证用户免费领取）；<br>5）之后，可进入“我的主页-我的证书”下载电子证书，跟踪纸质证书制作、邮寄进度。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"XX课程什么时候结课?发证书？","answer":"随堂课程因为每门课选课人数不同，具体结课时间无法确定。证书制作也需要一定时间，发放后也你会收到站内信提示。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"请问申请的纸质证书在哪里查询进度？","answer":"可以在个人主页的左侧查询证书进度。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"申请认证证书需要付款吗？","answer":"学堂在线致力于向广大用户提供世界顶尖大学精品内容，绝大部分课程的认证证书完全免费，少数大学会对精品课程的认证证书收取一定费用。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"如何申请纸质证书？","answer":"进入我的证书-申请纸质证书 。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"纸质证书收费吗？多少钱？","answer":"申请纸质证书需要支付99元。目前仅支持支付宝，网上银行支付。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"我已经申请纸质证书，请问大概多久可以寄到？使用什么快递？","answer":"15工作日内使用圆通快递邮寄，发货后可以通过我的证书查询到物流单号。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"纸质证书如何申请退款？","answer":"证书开始制作之前可进入“我的证书”申请退款。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"申请退款后款项几天可以到账？退款到哪里?","answer":"申请退款后7日内会受理您的退款。原支付方式退回。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"我的证书快递给快递丢了。","answer":"请与快递公司核实。出现此情况我们会为您重新邮寄，发货后可以通过我的证书查询物流单号进行跟踪。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"为什么我申请的纸质证书，都一个多月的了，还不见寄过来呢？","answer":"很抱歉给您带来不好的体验。请向人工客服提供交易流水号、收件人信息，我们会为您核实。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"申请证书的页面打不开","answer":"请向人工客服提供用户名，课程名字，以及说明是电子版证书还是纸质证书"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"请问xx课程多少分可以获得证书？","answer":"每个课程的及格分数不一样，具体参见课程大纲或者课程信息，或通过讨论区咨询。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"我注册的时候没有填写邮寄地址，会影响证书的邮寄吗？","answer":"发放纸质证书时，会提示您填写邮寄地址信息。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"如何修改邮寄地址？","answer":"如果证书未邮寄可以为您修改地址，如果已经邮寄建议联系快递修改。如需修改请向人工客服提供您的收件人姓名，联系电话以及新的邮寄地址。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"如何退课 ？","answer":"我的主页-我的课程-右上角管理-退出课程。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"课程提示尚未开课，什么时候开课？","answer":"课程上面会显示开课时间X天内开课。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"已经完结，不能报名了，怎么办啊？","answer":"完结后无法报名。课程会进行重复开课，建议加入关注，报名下一班次课程。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"我退课了，现在想继续报名学习，我的学习进度还有吗？","answer":"学习进度会为您保留。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"课程多久更新一次？","answer":"大部分课程每周更新一次，具体信息建议您见课程内公告。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"我怎么找不到视频啊？","answer":"进入课程后，点击上方导航条的“课件”，再点击对应章节，即可观看视频进行学习。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"我报名了某门课程，但最近很忙没时间学习了，3个月后还能看吗？","answer":"已经报名的课程，会在个人主页里保留，后期可以随时进入学习，但作业截止时间可能已过，不再能够拿到证书。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"我加入了一门课程，为什么不能马上开始上课？","answer":"MOOC有严格的时间限制，并非随时点播的公开课。您可以先进行课程报名，开课前会有消息提醒。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"课程有讲义吗？","answer":"根据课程安排而有所不同，具体仔细查看课程页面。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"课程有教材吗？","answer":"根据授课教师安排而有所不同，部分课程老师会建议参考书籍，部分课程并无指定教材。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"字幕/知识点错了，我该怎么办？","answer":"在讨论区发帖，向助教反馈吧。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"我看了视频，为什么进度那里没有显示？","answer":"“进度”处显示的是作业的得分情况，部分主观题的得分不会自动显示，需要助教处理，请耐心等待噢。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"作业在哪里？","answer":"作业在课件中，在视频中穿插，或在每一章课程的最后一部分，请留意查看。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"我得了多少分啊？","answer":"在“课程进度”处查询。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"为什么我无法提交课后作业？","answer":"每次课后作业有截止时间，在左侧章节列表中显示。超过截止时间，课后作业将无法提交。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"如果我提交课后作业后发现答案有误，该如何更改？","answer":"每道题目都有提交次数的限制，具体情况根据老师对题目的设置有所不同。在提交次数超过限制次数之后，不能再更改。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"作业截止日期过了，可是我真的很想交作业.","answer":"为公平起见，作业截止日期过后，无法提交。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"如果我的某次作业没有提交，最后能拿到证书吗？","answer":"会对最终成绩有一定影响，建议您按时交作业。若最终成绩达到课程考核要求，也可拿到证书。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"课程已经开了3周了，我现在还能加入吗，我还能获得证书吗？","answer":"只要最终成绩达到课程考核要求，即可拿到证书。课程考核方式详见课程内部说明。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"我期末得了多少分啊？","answer":"在期末考试截止日期后，老师会对期末考试成绩予以批改和确认，届时可以在考试系统里看，课程进度处也会有显示。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"如果我的某门课程成绩不合格，会受到什么影响吗？","answer":"目前学堂在线上的各门课程成绩之间没有影响，某门课程成绩不合格不会影响到其他课程的学习。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"我没有跟上学习进度，可以参加补考吗？","answer":"目前的课程没有补考安排。一些课程明年还会重开，可以届时参加新一期的课程，按进度完成作业与考试。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"自主课程什么意思？","answer":"这是全新的自主学习模式。自主课程可随时加入，课件全部开放， 考核通过即可获得证书证书。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"自主课程有证书吗？","answer":"自主课程考核通过就可以获得证书，证书价值与随堂模式一致。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"申请认证需要付款吗？","answer":"学堂在线致力于向广大用户提供世界顶尖大学精品内容，但是课程认证需要有专属客服核实、比对确保学习者身份真实性，所以需支付一定的认证服务费。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"什么是认证证书？","answer":"认证证书是学堂在线与合作机构联合认证的，带授课教师签字的实名制学习证书，与普通结课证书相比含金量更高。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"如何可获得认证证书？","answer":"选择“加课并申请认证”的形式加入新课程，学习之前进行身份记录，提交计分作业、考试结果时，按照要求完成身份验证，最终成绩达标且身份认证通过的学习者，可领取认证证书。支付认证服务的用户，若成绩合格，学堂会赠送纸质证书，并免费邮寄，无需再次支付证书费用。"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"我已经付款申请认证证书，遇到特殊情况不能继续上课，可以退款吗？","answer":"可以。在“开课之前、开课一周之内、付款一周之内”均可无条件退款。网站上退款方式为进入我的主页，在我的课程中，点击右上角的管理，找到已申请认证的课程，点击退出课程同时系统会生成退款请求，客服在7天之内退款"}
+{"index": {"_type": "common", "_index": "robot_common"}}
+{"question":"为什么系统显示我“支付失败”？","answer":"请核实是否扣款成功，若未扣款请稍后再试。<br>2）支付宝平台偶尔会出现请求过多导致的暂时不可用，可稍后尝试；<br>3）支付账户余额不足，有效期已过，或存在不良交易记录；"}
