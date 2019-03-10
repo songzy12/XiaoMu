@@ -6,6 +6,7 @@ import requests
 import urllib
 
 import pandas as pd
+import matchzoo as mz
 from matchzoo import DataPack
 
 
@@ -111,6 +112,7 @@ def load_data(stage='train'):
     path = '../data/%s.csv' % stage
     data_pack = mz.pack(pd.read_csv(path, index_col=0))
     data_pack.relation['label'] = data_pack.relation['label'].astype('float32')
+    return data_pack
 
 
 if __name__ == '__main__':

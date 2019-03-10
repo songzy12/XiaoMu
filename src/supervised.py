@@ -1,5 +1,5 @@
 import matchzoo as mz
-from .util import load_data
+from util import load_data
 
 import bokeh
 from bokeh.plotting import figure
@@ -16,7 +16,6 @@ model_classes = [
 
 train_data_pack = load_data('train')
 test_data_pack = load_data('test')
-
 
 task = mz.tasks.Ranking(metrics=['map', 'mrr', 'ndcg'])
 results = []
