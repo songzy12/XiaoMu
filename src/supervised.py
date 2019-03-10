@@ -1,5 +1,5 @@
 import matchzoo as mz
-from matchzoo import load_data_pack
+from .util import load_data
 
 import bokeh
 from bokeh.plotting import figure
@@ -13,18 +13,12 @@ model_classes = [
     mz.models.DUET,
 ]
 
-dirpath = '../data'
-data_pack = load_data_pack(dirpath)
 
-num_train = int(len(data_pack) * 0.8)
-data_pack.shuffle(inplace=True)
-train_slice = data_pack[:num_train]
-test_slice = data_pack[num_train:]
+train_data_pack = load_data('train')
+test_data_pack = load_data('test')
 
-train_slice.save(dirpath+'/train')
-test_slice.save(dirpath+'/test')
 
-task = mz.tasks.Ranking(metrics=['map', 'mrr','ndcg'])
+task = mz.tasks.Ranking(metrics=['map', 'mrr', 'ndcg'])
 results = []
 for model_class in model_classes:
     print(model_class)

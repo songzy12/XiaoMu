@@ -46,7 +46,7 @@ def prepare_data():
 
     num_candidate = 5
 
-    test_portion = 0.1
+    test_portion = 0.2
     cnt = int((1-test_portion)*len(m_candidate))
     cur_cnt = 0
 
@@ -89,19 +89,28 @@ def prepare_data():
                 else:
                     test_relation.append([text2id[k], text2id[candidate], 1])
 
-    train_relation = pd.DataFrame(train_relation, columns=['id_left', 'id_right', 'label'])
-    test_relation = pd.DataFrame(test_relation, columns=['id_left', 'id_right', 'label'])    
+    train_relation = pd.DataFrame(train_relation, columns=[
+                                  'id_left', 'id_right', 'label'])
+    test_relation = pd.DataFrame(test_relation, columns=[
+                                 'id_left', 'id_right', 'label'])
     left = pd.DataFrame(left, columns=['id_left', 'text_left'])
     left.set_index('id_left', inplace=True)
     right = pd.DataFrame(right, columns=['id_right', 'text_right'])
     right.set_index('id_right', inplace=True)
 
-    data_pack = DataPack(relation=train_relation, left=left, right=right)
-    dirpath = '../data/train'
-    data_pack.save(dirpath)
-    data_pack = DataPack(relation=test_relation, left=left, right=right)
-    dirpath = '../data/test'
-    data_pack.save(dirpath)
+    train = pd.merge(train_relation, left, on=['id_left'])
+    train = pd.merge(train, right, on=['id_right'])
+    train.to_csv('../data/train.csv')
+
+    test = pd.merge(test_relation, left, on=['id_left'])
+    test = pd.merge(test, right, on=['id_right'])
+    test.to_csv('../data/test.csv')
+
+
+def load_data(stage='train'):
+    path = '../data/%s.csv' % stage
+    data_pack = mz.pack(pd.read_csv(path, index_col=0))
+    data_pack.relation['label'] = data_pack.relation['label'].astype('float32')
 
 
 if __name__ == '__main__':
