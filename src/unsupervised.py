@@ -1,8 +1,12 @@
-import gensim
-import jieba
-import json
 import io
+import json
+from collections import defaultdict
+
+import gensim
 import numpy as np
+import pandas as pd
+
+from metric import _map, mrr, ndcg
 
 
 model = gensim.models.Word2Vec.load(
@@ -93,17 +97,23 @@ def get_edit_distance(doc1, doc2):
     return -previous_row[-1]
 
 
-if __name__ == '__main__':
-    data_dir = '../data/switch_processed.json'
-    with io.open(data_dir, encoding='utf8') as f:
-        items = json.loads(f.read())
-    print(len(items))
+def run(test_file):
+    df = pd.read_csv(test_file)
+
     for dist_func in [get_lcs, get_edit_distance, get_dot, get_wmd]:
-        cnt = 0
-        for item in items:
-            question = item[0]['question']
-            answers = item[0]['answers']
-            answers.sort(key=lambda x: dist_func(question, x), reverse=True)
-            if answers and answers[0] == item[0]['answer']:
-                cnt += 1
-        print(dist_func, cnt)
+        metrics = defaultdict(list)
+        for query in set(df['text_left']):
+            candidates = df[df['text_left'] == query]['text_right']
+            y_true = df[df['text_left'] == query]['label']
+            y_pred = [dist_func(query, candidate)
+                      for candidate in candidates]
+            for metric in [mrr, _map, ndcg]:
+                metrics[str(metric)].append(metric(y_true, y_pred))
+        for metric in [mrr, _map, ndcg]:
+            print("%s\t%s: %f" % (str(dist_func), str(metric), sum(
+                metrics[str(metric)])/len(metrics[str(metric)])))
+
+
+if __name__ == '__main__':
+    test_file = '../data/test.csv'
+    run(test_file)

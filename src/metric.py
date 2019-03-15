@@ -9,7 +9,7 @@ def sort_and_couple(labels, scores):
     return sorted(couple, key=lambda x: x[1], reverse=True)
 
 
-def map(y_true, y_pred, _threshold=0):
+def _map(y_true, y_pred, _threshold=0):
     """
     Calculate mean average precision.
     Example:
