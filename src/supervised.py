@@ -28,7 +28,7 @@ model_classes = [
 train_data_pack = load_data('train')
 test_data_pack = load_data('test')
 
-task = mz.tasks.Ranking(metrics=['mrr', 'ndcg'])
+task = mz.tasks.Ranking(metrics=['mrr', 'map', 'ndcg'])
 results = []
 for model_class in model_classes:
     print(model_class)
@@ -78,5 +78,5 @@ for i, result in enumerate(results):
         result['history'][str(key)] = result['history'].pop(key)
 
 print(json.dumps(results, ensure_ascii=False, indent=4))
-with io.open('../log/history.json', encoding='utf8') as f:
+with io.open('../log/history.json', 'w', encoding='utf8') as f:
     f.write(json.dumps(results, ensure_ascii=False, indent=4))
