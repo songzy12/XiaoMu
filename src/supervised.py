@@ -1,3 +1,5 @@
+import json
+
 import matchzoo as mz
 from util import load_data
 
@@ -8,23 +10,24 @@ from bokeh.layouts import column
 from bokeh.models.tools import HoverTool
 
 model_classes = [
+    mz.models.ANMM,
+    mz.models.MVLSTM,
     mz.models.CDSSM,
     mz.models.DSSM,
     mz.models.DUET,
-    mz.models.DenseBaseline,
     mz.models.ArcI,
     mz.models.ArcII,
-    mz.models.MatchPyramid,
-    mz.models.DRMM,
-    mz.models.ANMM,
-    mz.models.MVLSTM
+
+#    mz.models.MatchPyramid,
+#    mz.models.DRMM,
+#    mz.models.DenseBaseline,
 ]
 
 
 train_data_pack = load_data('train')
 test_data_pack = load_data('test')
 
-task = mz.tasks.Ranking(metrics=['map', 'mrr', 'ndcg'])
+task = mz.tasks.Ranking(metrics=['mrr', 'ndcg'])
 results = []
 for model_class in model_classes:
     print(model_class)
@@ -67,3 +70,12 @@ for metric, sub_chart in charts.items():
         sub_chart.add_tools(hover_tool)
 
 export_png(column(*charts.values()), "quick_start_chart.png")
+
+for i, result in enumerate(results):
+    result['history'] = result['history'].history
+    for key in list(result['history'].keys()):
+        result['history'][str(key)] = result['history'].pop(key)
+
+print(json.dumps(results, ensure_ascii=False, indent=4))
+with io.open('../log/history.json', encoding='utf8') as f:
+    f.write(json.dumps(results, ensure_ascii=False, indent=4))
