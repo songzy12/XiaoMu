@@ -69,6 +69,7 @@ for metric, sub_chart in charts.items():
         lines[result['name']] = sub_chart.line(
             x, y, color=color, line_width=2, alpha=0.5, legend=result['name'])
         sub_chart.add_tools(hover_tool)
+    export_png(sub_chart, "%s.png" % metric)
 
 export_png(column(*charts.values()), "quick_start_chart.png")
 
