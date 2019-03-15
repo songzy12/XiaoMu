@@ -1,3 +1,4 @@
+import io
 import json
 
 import matchzoo as mz
