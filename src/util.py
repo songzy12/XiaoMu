@@ -45,8 +45,6 @@ def prepare_data():
     train_relation = []
     test_relation = []
 
-    num_candidate = 5
-
     test_portion = 0.2
     cnt = int((1-test_portion)*len(m_candidate))
     cur_cnt = 0
@@ -60,7 +58,7 @@ def prepare_data():
             text2id[k] = 't_%d' % (len(text2id))
             left.append([text2id[k], k])
 
-        for _candidate in v[:num_candidate]:
+        for _candidate in v:
             candidate = _candidate[0]
 
             if candidate not in text2id:
@@ -77,18 +75,6 @@ def prepare_data():
                     train_relation.append([text2id[k], text2id[candidate], 0])
                 else:
                     test_relation.append([text2id[k], text2id[candidate], 0])
-
-        for _candidate in v[num_candidate:]:
-            candidate = _candidate[0]
-            if candidate not in text2id:
-                text2id[candidate] = 't_%d' % (len(text2id))
-                right.append([text2id[candidate], candidate])
-
-            if candidate in m_match[k]:
-                if cur_cnt < cnt:
-                    train_relation.append([text2id[k], text2id[candidate], 1])
-                else:
-                    test_relation.append([text2id[k], text2id[candidate], 1])
 
     train_relation = pd.DataFrame(train_relation, columns=[
                                   'id_left', 'id_right', 'label'])
