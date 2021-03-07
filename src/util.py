@@ -1,13 +1,10 @@
-import gensim
 import io
 import json
-import jieba
-import requests
 import urllib
+import requests
 
 import pandas as pd
 import matchzoo as mz
-from matchzoo import DataPack
 
 
 # model = gensim.models.Word2Vec.load('data/wiki.zh.text.jieba.model')

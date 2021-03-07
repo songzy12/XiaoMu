@@ -1,5 +1,3 @@
-import io
-import json
 from collections import defaultdict
 
 import gensim

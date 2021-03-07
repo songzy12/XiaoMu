@@ -1,5 +1,3 @@
-代码位置 `zhilan:/home/songzy/Xiaomu-Matching`
-
 ## code
 
 * data/
