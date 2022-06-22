@@ -1,5 +1,5 @@
 pandas==1.2.1
 gensim==3.8.3
 requests==2.22.0
-numpy==1.18.5
+numpy==1.22.0
 matchzoo==2.2.0
