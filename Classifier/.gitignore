@@ -1,0 +1,8 @@
+log
+model
+debug
+
+__pycache__
+*.swp
+
+.vscode

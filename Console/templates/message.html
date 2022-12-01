@@ -1,0 +1,93 @@
+<html>
+
+<head>
+	<meta charset="utf-8"><!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<style>
+		table {
+			max-width: 100%;
+		}
+
+		table td {
+			word-break: break-all;
+		}
+
+		h2 {
+			display: inline;
+			padding: 15px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="tab">
+        <h2><a href="/">课程分类</a></h2>
+        <h2><a href="/statistics">统计数据</a></h2>
+        <h2><a href="/record">工作记录</a></h2>
+        <h2><a href="/answer_selection">答案选择标注</a></h2>
+	</div>
+
+	<h1>{{name}}: {{cnt_left}}</h1>
+	<table border="1" align="center" style="width:100%">
+		<tr>
+			<th> qid </th>
+			<th> time </th>
+			<th> question</th>
+			<th> answer </th>
+			<th> evaluation </th>
+		</tr>
+		{% for qid, q, a, time in q_a%}
+		<tr>
+			<form action='/gen_qa_pair' method="post" id="gen_qa_pair" target="hiddenFrame">
+				<td width=17%>{{qid}}</td>
+				<td width=18%>{{time}}</td>
+				<td width=15%>{{q}}</td>
+				<td width=30%>{{a}}</td>
+
+				<input type="hidden" name="qid" value="{{qid}}" />
+				<input type="hidden" name="time" value="{{time}}" />
+				<input type="hidden" name="question" value="{{q}}" />
+				<input type="hidden" name="answer" value="{{a}}" />
+				<input type="hidden" name="course_id" value="{{course_id}}">
+
+				<td width=20%>
+					问题分类：
+					<fieldset id="category">
+						<input type="radio" name="category" value="0">0. 平台使用相关<br>
+						<input type="radio" name="category" value="1">1. 课程信息相关<br>
+						<input type="radio" name="category" value="2">2. 简单知识点解释<br>
+						<input type="radio" name="category" value="3">3. 复杂知识点讨论<br>
+						<input type="radio" name="category" value="4">4. 共性的反馈及建议<br>
+						<input type="radio" name="category" value="5">5. 聊天及其他<br>
+						<input type="radio" name="category" value="6">6. 个人相关的请求<br>
+						<input type="radio" name="category" value="7">7. 无意义或不适宜的内容<br>
+						<input type="radio" name="category" value="8">8. 预置的服务请求<br>
+					</fieldset>
+					<br>
+					问答评估：
+					<fieldset id="evaluate">
+						<input type="radio" name="evaluate" value="both good">Both good<br>
+						<input type="radio" name="evaluate" value="good question">Good question<br>
+						<input type="radio" name="evaluate" value="bad question">Bad question<br>
+					</fieldset>
+					<br>
+					edit question: <input class="form-control" type="text" name="amended_q" style="width:200px" /><br>
+					edit answer: <input class="form-control" type="text" name="amended_a" style="width:200px" /><br>
+					<input class="btn btn-default" type="submit" value="Save" />
+				</td>
+			</form>
+
+			<iframe name="hiddenFrame" width="0" height="0" border="0" style="display: none;"></iframe>
+		<tr>
+			{%endfor%}
+	</table>
+</body>
+
+</html>
